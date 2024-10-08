@@ -1,4 +1,3 @@
-
 import { Github, Linkedin, Mail, Twitter } from "lucide-react";
 import Link from "next/link";
 
@@ -39,7 +38,8 @@ export default function HomeComponent() {
               Contact Me
             </Link> */}
             <Link
-              href="#experience"
+              href="https://calendly.com/jaequery"
+              target="_blank"
               className="px-3 py-1 border border-gray-300 rounded hover:bg-gray-100 transition-colors"
             >
               Schedule a Call
