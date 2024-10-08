@@ -135,6 +135,7 @@ export default function HomeComponent() {
           <div className="flex space-x-2">
             <Link
               href="https://github.com/jaequery"
+              target="_blank"
               className="p-2 border border-gray-200 rounded hover:bg-gray-100"
             >
               <Github className="h-4 w-4" />
@@ -142,6 +143,7 @@ export default function HomeComponent() {
             </Link>
             <Link
               href="https://linkedin.com/in/jaequery"
+              target="_blank"
               className="p-2 border border-gray-200 rounded hover:bg-gray-100"
             >
               <Linkedin className="h-4 w-4" />
@@ -149,6 +151,7 @@ export default function HomeComponent() {
             </Link>
             <Link
               href="https://twitter.com/jaequery"
+              target="_blank"
               className="p-2 border border-gray-200 rounded hover:bg-gray-100"
             >
               <Twitter className="h-4 w-4" />
@@ -158,7 +161,7 @@ export default function HomeComponent() {
         </section>
       </main>
       <footer className="px-4 py-3 text-center text-xs text-gray-500 border-t border-gray-200">
-        © 2023 Jae Query. All rights reserved.
+        © 2023 jaequery.dev. All rights reserved.
       </footer>
     </div>
   );
