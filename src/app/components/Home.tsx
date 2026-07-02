@@ -1,167 +1,153 @@
-import { Github, Linkedin, Twitter } from "lucide-react";
 import Link from "next/link";
+
+const work = [
+  {
+    name: "Nobrainer Labs",
+    desc: "Digital incubator for beautiful, fundable MVPs.",
+    when: "2019 —",
+  },
+  {
+    name: "AmpCoil",
+    desc: "Tech strategy: PEMF, biofeedback, sound.",
+    when: "2017 —",
+  },
+  {
+    name: "TribeCoin",
+    desc: "CTO, blockchain venture.",
+    when: "2018 – 19",
+  },
+  {
+    name: "Markett",
+    desc: "Chief architect, entrepreneur platform.",
+    when: "2016 – 17",
+  },
+  {
+    name: "Processing.com",
+    desc: "CTO, international payments.",
+    when: "2011 – 16",
+  },
+];
+
+const socials = [
+  { name: "GitHub", href: "https://github.com/jaequery" },
+  { name: "X", href: "https://twitter.com/jaequery" },
+  { name: "LinkedIn", href: "https://linkedin.com/in/jaequery" },
+];
 
 export default function HomeComponent() {
   return (
-    <div className="flex flex-col min-h-screen bg-white text-gray-900 text-sm">
-      <header className="px-4 h-12 flex items-center border-b border-gray-200">
-        <Link className="font-semibold" href="#">
+    <div className="mx-auto max-w-[640px] px-6 pt-16 pb-24 text-[15.5px] leading-[1.7]">
+      <header className="mb-28 flex items-baseline justify-between max-sm:mb-16">
+        <Link href="#" className="font-semibold transition-colors hover:text-accent">
           jaequery.dev
         </Link>
-        <nav className="ml-auto flex gap-4">
-          <Link className="hover:underline underline-offset-4" href="#about">
+        <nav className="flex gap-6 text-sm text-muted">
+          <Link href="#about" className="transition-colors hover:text-accent">
             About
           </Link>
-          {/* <Link className="hover:underline underline-offset-4" href="#experience">
-            Experience
-          </Link> */}
-          <Link className="hover:underline underline-offset-4" href="#skills">
-            What I do
+          <Link href="#work" className="transition-colors hover:text-accent">
+            Work
           </Link>
-          <Link className="hover:underline underline-offset-4" href="#contact">
+          <Link href="#contact" className="transition-colors hover:text-accent">
             Contact
           </Link>
         </nav>
       </header>
-      <main className="flex-1 px-4 py-8 max-w-3xl mx-auto w-full">
-        <section className="mb-12 text-center">
-          <h1 className="text-2xl font-bold mb-2">Jae Lee</h1>
-          <p className="text-gray-600 mb-4">
-            Serial Entrepreneur | CTO | Full Stack Developer | 20+ Years
-            Experience
+
+      <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+        Builder · CTO · 20 years
+      </p>
+      <h1 className="mb-[18px] text-[40px] font-bold leading-[1.15] tracking-tight max-sm:text-3xl">
+        I make ideas ship.
+      </h1>
+      <p className="max-w-[52ch] text-muted">
+        Full-stack developer and serial entrepreneur. Scalable platforms,
+        beautiful MVPs, and software that survives contact with production.
+      </p>
+      <p className="mt-6 text-sm">
+        <Link
+          href="https://calendly.com/jaequery"
+          target="_blank"
+          className="text-accent transition-colors hover:text-foreground"
+        >
+          Schedule a call →
+        </Link>
+      </p>
+
+      <section id="about" className="mt-[88px]">
+        <h2 className="mb-5 font-semibold">About</h2>
+        <div className="max-w-[56ch] space-y-3 text-muted">
+          <p>
+            Two decades of full-stack development and entrepreneurship — a deep
+            understanding of how to build innovative, scalable applications.
           </p>
-          <div className="flex justify-center gap-2">
-            {/* <Link
-              href="#contact"
-              className="px-3 py-1 bg-gray-900 text-white rounded hover:bg-gray-700 transition-colors"
-            >
-              Contact Me
-            </Link> */}
-            <Link
-              href="https://calendly.com/jaequery"
-              target="_blank"
-              className="px-3 py-1 border border-gray-300 rounded hover:bg-gray-100 transition-colors"
-            >
-              Schedule a Call
-            </Link>
-          </div>
-        </section>
-        <section id="about" className="mb-8">
-          <h2 className="text-lg font-semibold mb-2">About Me</h2>
-          <p className="text-gray-600">
-            With over two decades of experience in full-stack development and
-            entrepreneurship, I’ve built a deep understanding of how to create
-            innovative, scalable applications. <br />
-            <br />I am currently a founder of Nobrainer Labs, a digital
-            incubator focused on delivering beautiful MVP projects. I’m
-            committed to helping people through technology and delivering
-            high-quality software solutions that have a positive impact on the
-            world.
+          <p>
+            Currently founder of{" "}
+            <b className="font-semibold text-foreground">Nobrainer Labs</b>, a
+            digital incubator delivering beautiful, fundable MVPs. Committed to
+            helping people through technology.
           </p>
-        </section>
-        {/* <section id="experience" className="mb-8">
-          <h2 className="text-lg font-semibold mb-2">Experience</h2>
-          <div className="space-y-4">
-            <div className="border-l-2 border-gray-200 pl-4">
-              <h3 className="font-semibold">Founder</h3>
-              <p className="text-gray-600">
-                Nobrainer Labs | Apr 2019 - Present
-              </p>
-              <p className="text-xs text-gray-600 mt-1">
-                Digital incubator focused on delivering beautiful MVP projects
-                that are scalable and fundable.
-              </p>
-            </div>
-            <div className="border-l-2 border-gray-200 pl-4">
-              <h3 className="font-semibold">Tech Advisor / Consultant</h3>
-              <p className="text-gray-600">AmpCoil | Jul 2017 - Present</p>
-              <p className="text-xs text-gray-600 mt-1">
-                Advising on tech strategy for an innovative wellness device
-                combining PEMF, biofeedback, and sound technology.
-              </p>
-            </div>
-            <div className="border-l-2 border-gray-200 pl-4">
-              <h3 className="font-semibold">CTO</h3>
-              <p className="text-gray-600">TribeCoin | Jan 2018 - Jan 2019</p>
-            </div>
-            <div className="border-l-2 border-gray-200 pl-4">
-              <h3 className="font-semibold">Chief Architect</h3>
-              <p className="text-gray-600">Markett | Jul 2016 - Sep 2017</p>
-              <p className="text-xs text-gray-600 mt-1">
-                Architected platform empowering lifestyle entrepreneurs with
-                mentorship and connections to high-growth companies.
-              </p>
-            </div>
-            <div className="border-l-2 border-gray-200 pl-4">
-              <h3 className="font-semibold">CTO</h3>
-              <p className="text-gray-600">
-                Processing.com | Sep 2011 - Aug 2016
-              </p>
-              <p className="text-xs text-gray-600 mt-1">
-                Led strategic product direction for an international payment
-                processing platform.
-              </p>
-            </div>
+        </div>
+      </section>
+
+      <section id="work" className="mt-[88px]">
+        <h2 className="mb-5 font-semibold">
+          Work <span className="font-normal text-muted">/ roles &amp; ventures</span>
+        </h2>
+        {work.map((item) => (
+          <div
+            key={item.name}
+            className="flex items-baseline gap-3 py-2 max-sm:flex-wrap max-sm:gap-x-3 max-sm:gap-y-1"
+          >
+            <b className="whitespace-nowrap font-semibold">{item.name}</b>
+            <span className="text-sm text-muted">{item.desc}</span>
+            <span className="ml-auto whitespace-nowrap text-[13px] text-muted max-sm:ml-0 max-sm:w-full">
+              {item.when}
+            </span>
           </div>
-        </section> */}
-        <section id="skills" className="mb-8">
-          <h2 className="text-lg font-semibold mb-2">What I do</h2>
-          <div className="flex flex-wrap gap-2">
-            {[
-              "Backend (Nest.js, tRPC)",
-              "Frontend (React, Next.js, Tailwind)",
-              "Database (Postgres, Redis)",
-              "AI / ML (Langchain, OpenAI, Anthropic)",
-              "Platform Architecture (AWS, GCP)",
-              "Devops (Linux, Docker)",
-              "Blockchain (Solana, Aptos)",
-              "Startup Incubation (Nobrainer Labs)",
-            ].map((skill) => (
-              <span
-                key={skill}
-                className="px-2 py-1 bg-gray-100 text-xs rounded"
-              >
-                {skill}
-              </span>
-            ))}
-          </div>
-        </section>
-        <section id="contact">
-          <h2 className="text-lg font-semibold mb-2">Contact Me</h2>
-          <p className="text-gray-600 mb-2">
-            Feel free to reach out for consultations or even just a friendly
-            hello 🤗
-          </p>
-          <div className="flex space-x-2">
+        ))}
+      </section>
+
+      <section id="skills" className="mt-[88px]">
+        <h2 className="mb-5 font-semibold">
+          What I do <span className="font-normal text-muted">/ the short list</span>
+        </h2>
+        <p className="max-w-[56ch] text-sm text-muted">
+          Nest.js · tRPC · React · Next.js · Tailwind · Postgres · Redis ·
+          LangChain · OpenAI · Anthropic · AWS · GCP · Linux · Docker · Solana ·
+          Aptos · startup incubation
+        </p>
+      </section>
+
+      <section id="contact" className="mt-[88px]">
+        <h2 className="mb-5 font-semibold">Contact</h2>
+        <p className="max-w-[56ch] text-muted">
+          Consultations, collaborations, or just a friendly hello —{" "}
+          <Link
+            href="https://calendly.com/jaequery"
+            target="_blank"
+            className="text-accent transition-colors hover:text-foreground"
+          >
+            book time
+          </Link>{" "}
+          or find me below.
+        </p>
+      </section>
+
+      <footer className="mt-32 flex justify-between text-sm text-muted">
+        <span>© jaequery.dev</span>
+        <nav className="flex gap-6">
+          {socials.map((social) => (
             <Link
-              href="https://github.com/jaequery"
+              key={social.name}
+              href={social.href}
               target="_blank"
-              className="p-2 border border-gray-200 rounded hover:bg-gray-100"
+              className="transition-colors hover:text-accent"
             >
-              <Github className="h-4 w-4" />
-              <span className="sr-only">GitHub</span>
+              {social.name}
             </Link>
-            <Link
-              href="https://linkedin.com/in/jaequery"
-              target="_blank"
-              className="p-2 border border-gray-200 rounded hover:bg-gray-100"
-            >
-              <Linkedin className="h-4 w-4" />
-              <span className="sr-only">LinkedIn</span>
-            </Link>
-            <Link
-              href="https://twitter.com/jaequery"
-              target="_blank"
-              className="p-2 border border-gray-200 rounded hover:bg-gray-100"
-            >
-              <Twitter className="h-4 w-4" />
-              <span className="sr-only">Twitter</span>
-            </Link>
-          </div>
-        </section>
-      </main>
-      <footer className="px-4 py-3 text-center text-xs text-gray-500 border-t border-gray-200">
-        © 2023 jaequery.dev. All rights reserved.
+          ))}
+        </nav>
       </footer>
     </div>
   );
