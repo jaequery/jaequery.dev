@@ -36,3 +36,6 @@ yarn-error.log*
 next-env.d.ts
 .gstack/
 .fredrin/
+
+# sqlite (seeded at runtime)
+/data/

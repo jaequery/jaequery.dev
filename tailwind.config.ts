@@ -10,9 +10,11 @@ const config: Config = {
     extend: {
       colors: {
         background: "var(--background)",
+        surface: "var(--surface)",
         foreground: "var(--foreground)",
         muted: "var(--muted)",
         accent: "var(--accent)",
+        line: "var(--line)",
       },
     },
   },
